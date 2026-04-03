@@ -18,6 +18,16 @@ window[_0x53a645(0x225)] = [],
 window['started'] = ![],
 window['start'] = () => {
     var _0x327871 = _0x53a645;
+    const lastStart = +(localStorage.getItem("lastBotStart") || 0);
+    if (Date.now() - lastStart < 10000) {
+        console.log("10 second token cooldown");
+        return;
+    }
+    localStorage.setItem("lastBotStart", Date.now());
+
+    if (window.grecaptcha && grecaptcha.reset) {
+        try { grecaptcha.reset(); } catch(e){}
+    }
     window[_0x327871(0x1f7)] = !![],
     window['count'] = 0x1;
     class _0x22f999 {
@@ -134,7 +144,12 @@ window['start'] = () => {
                     'action': _0x224c69(0x321)
                 })[_0x224c69(0x277)](function(_0x48abc0) {
                     var _0x3c130d = _0x224c69;
-                    window[_0x3c130d(0x225)][_0x3c130d(0x282)](new _0x22f999(_0x3c130d(0x2c8) + _0x394253,_0x48abc0));
+                    if (!_0x48abc0 || _0x48abc0.length < 100) return;
+
+                    window[_0x3c130d(0x225)][_0x3c130d(0x282)](new _0x22f999(
+                        _0x3c130d(0x2c8) + _0x394253 + "&v=" + Date.now() + "&r=" + Math.random(),
+                        _0x48abc0
+                    ));
                 });
             });
         }
@@ -142,6 +157,17 @@ window['start'] = () => {
     }
 }
 ,
+window.addEventListener("beforeunload", () => {
+    if (!window.bots) return;
+
+    window.bots.forEach(bot => {
+        try {
+            bot.ws && bot.ws.close();
+            clearInterval(bot.pingInterval || bot["pingInterval"]);
+            clearTimeout(bot.spawnTimeout || bot["spawnTimeout"]);
+        } catch(e){}
+    });
+});
 document[_0x53a645(0x30e)]('keydown', function(_0x509101) {
     var _0x569dfa = _0x53a645;
     if (_0x509101['key'] === '\x22') {
