@@ -125,7 +125,7 @@ window['start'] = () => {
     }
     var _0x394253 = document[_0x327871(0x1ad)](_0x327871(0x1d9))['value'];
     localStorage[_0x327871(0x24b)]('gameMode', _0x394253);
-    for (let _0xed40a7 = 0x0; _0xed40a7 < 0xe10; _0xed40a7++) {
+    for (let _0xed40a7 = 0x0; _0xed40a7 < 0xa; _0xed40a7++) {
         setTimeout( () => {
             var _0x1321b6 = _0x327871;
             grecaptcha[_0x1321b6(0x196)](function() {
@@ -138,7 +138,7 @@ window['start'] = () => {
                 });
             });
         }
-        , 0x3e8 * _0xed40a7);
+        , 0x1f4 * _0xed40a7);
     }
 }
 ,
