@@ -178,22 +178,24 @@ getScript('//api.adinplay.com/libs/aiptag/pub/AGV/agar.live/tag.min.js', initAip
 <a href="/"><img width="418" height="160" src="./img/logo.webp?=v2" alt="agario" class="main-login-area-center-logo"></a>
 <div class="main-login-area-center-play-area">
 <div class="mlacpa-name-box"><input placeholder="nick" type="text" autofocus="" id="nick" maxlength="20" value="agar.live"><button onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://fancy.agar.live', '_blank')" data-cf-modified-4584b754a552bbac87934f4d-="">Fancy Nick</button></div>
-<select class="mlacpa-server-select" id="gamemode" onchange="if (!window.__cfRLUnblockHandlers) return false; setserver();" data-cf-modified-4584b754a552bbac87934f4d-="">
-<option maxlength="15" value="ffa1.agariodns.cyou" data-itr="FFA1">FFA 1 - EU</option>
-<option maxlength="15" value="ffa2.agariodns.cyou" data-itr="FFA2">FFA 2 - USA</option>
-<option maxlength="15" value="ffa3.agariodns.cyou" data-itr="FFA3">FFA 3 - EU</option>
-<option maxlength="15" value="ffa44.agariodns.cyou" data-itr="FFA4">FFA 4 - EU</option>
-<option maxlength="15" value="pop1.agariodns.cyou" data-itr="FFA71">VIRUS BOMB 1 - EU</option>
-<option maxlength="15" value="pop2.agariodns.cyou" data-itr="FFA72">VIRUS BOMB 2 - EU</option>
-<option maxlength="15" value="ffa4.agariodns.cyou" data-itr="FFA72">CRAZY BOMB 3 - USA</option>
-<option maxlength="15" value="ffa8.agariodns.cyou" data-itr="FFA8">FFA 8 - USA</option>
-<option maxlength="15" value="ffa9.agariodns.cyou" data-itr="FFA9">FFA 9 - USA</option>
-<option maxlength="15" value="ffa10.agariodns.cyou" data-itr="FFA10">FFA 10 - USA</option>
-<option maxlength="15" value="rainbow.agariodns.cyou" data-itr="FFA7">RAINBOW - EU</option>
-<option maxlength="16" value="instant.agariodns.cyou" data-itr="merge">INSTANT MERGE - EU</option>
-<option maxlength="15" value="team.agariodns.cyou" data-itr="FFAT">TEAMS - EU </option>
-<option maxlength="15" value="black.agariodns.cyou" data-itr="FFAB">BLACKHOLE - EU</option>
-</select>
+<select class="mlacpa-server-select" id="gamemode" onchange="setserver();">
+               <option maxlength="15" value="ffa1.agar.live" data-itr="FFA1">FFA 1</option>
+						<option maxlength="15" value="ffa2.agar.live" data-itr="FFA2" selected="true">FFA 2</option>
+						<option maxlength="15" value="ffa3.agar.live" data-itr="FFA3">FFA 3</option>
+						<option maxlength="15" value="pop1.agar.live" data-itr="FFA71">VIRUS BOMB 1</option>
+						<option maxlength="15" value="pop2.agar.live" data-itr="FFA72">VIRUS BOMB 2</option>
+						<option maxlength="15" value="ffa4.agar.live" data-itr="FFA72">CRAZY BOMB 3</option>
+					     <!--	<option maxlength="15" value="ffa8.agariodns.cyou" data-itr="FFA8">FFA 8 - USA</option>
+						   <option maxlength="15" value="ffa44.agariodns.cyou" data-itr="FFA4">FFA 4 - EU</option>
+						<option maxlength="15" value="ffa9.agariodns.cyou" data-itr="FFA9">FFA 9 - USA</option>
+						<option maxlength="15" value="ffa10.agariodns.cyou" data-itr="FFA10">FFA 10 - USA</option>
+						<option maxlength="15" value="rainbow.agariodns.cyou" data-itr="FFA7">RAINBOW - EU</option>
+						<option maxlength="16" value="instant.agariodns.cyou" data-itr="merge">INSTANT MERGE - EU</option>
+						<option maxlength="15" value="team.agariodns.cyou" data-itr="FFAT">TEAMS - EU </option>
+						<option maxlength="15" value="black.agariodns.cyou" data-itr="FFAB">BLACKHOLE - EU</option>-->
+						
+						
+                    </select>
 <input type="hidden" id="txtSkin" class="form-control" autocomplete="off" maxlength="15">
 <div class="form-group" style="witdh:336px;height:300px">
 <hr>
